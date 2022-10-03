@@ -11,7 +11,13 @@ console.log(looseJsonParse(
 //
 
 
-var body = "function( a, b ){ console.log(a, b) }"
-var wrap = s => "{ return " + body + " };" //return the block having function expression
-var func = new Function( wrap(body) );
-func.call( null ).call( null, 1, 2  ); //invoke the function using arguments
+// var body = `function( a, b ){ console.log(a, b) }`
+// var wrap = s => "{ return " + body + " };" //return the block having function expression
+// var func = new Function( wrap(body) );
+// func.call( null ).call( null, 1, 2  ); //invoke the function using arguments
+
+
+var body = `( a, b )=>{ console.log(a, b) }`
+// var wrap = s => "{ return " + body + " };" //return the block having function expression
+var func = new Function( body );
+func.call( null ).call( null, 3, 5  ); //invoke the function using arguments

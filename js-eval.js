@@ -26,7 +26,7 @@ console.log(result2)
 
 
 let text3 = `
-(a, b) => {
+function myFun(a, b){
     return a + b
 }
 
@@ -35,3 +35,9 @@ myFun(2,3)
 
 let result3 = eval(text3);
 console.log(result3)
+
+
+var lim = 3;
+var body = 'return lim+1;';
+var newVal = eval('(lim) => {' + body + '}')(lim); //returns "4"
+console.log(newVal);
