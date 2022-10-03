@@ -37,9 +37,10 @@
 // console.log(result3)
 
 
-var lim = 3;
-var body = 'return lim+1;';
-var newVal = eval('(lim) => {' + body + '}')(lim); //returns "4"
+var atribut1 = 3;
+var atribut2 = 10;
+var body = 'return atribut1+atribut2+1;';
+var newVal = eval('(atribut1,atribut2) => {' + body + '}')(atribut1, atribut2); //returns "4"
 console.log(newVal);
 
 
