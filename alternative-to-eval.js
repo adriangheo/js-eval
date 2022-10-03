@@ -11,8 +11,7 @@ console.log(looseJsonParse(
 //
 
 
-let x = 10;
-let y = 20;
-let text = "x * y";
-let result = eval(text);
-console.log(Function(`return (${result})`))
+var body = "function( a, b ){ console.log(a, b) }"
+var wrap = s => "{ return " + body + " };" //return the block having function expression
+var func = new Function( wrap(body) );
+func.call( null ).call( null, 1, 2  ); //invoke the function using arguments

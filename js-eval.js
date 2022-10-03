@@ -18,3 +18,20 @@ let y = 20;
 let text = "x * y";
 let result = eval(text);
 console.log(result)
+
+
+let text2 = "2 * 3";
+let result2 = eval(text2);
+console.log(result2)
+
+
+let text3 = `
+(a, b) => {
+    return a + b
+}
+
+myFun(2,3)
+`
+
+let result3 = eval(text3);
+console.log(result3)
