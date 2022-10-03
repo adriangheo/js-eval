@@ -39,5 +39,5 @@ console.log(result3)
 
 var lim = 3;
 var body = 'return lim+1;';
-var newVal = eval('(lim) => {' + body + '}')(lim); //returns "4"
+var newVal = eval('(lim) => {' + body + '}')(7); //returns "4"
 console.log(newVal);
